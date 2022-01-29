@@ -10,7 +10,7 @@ const app = express();
 
 // connection to db
 
-mongoose.connect(process.env.MONGODB_CLOUD)
+mongoose.connect(process.env.MONGODB)
     .then(db => console.log('db connected'))
     .catch(err => console.log(err));
 
@@ -33,6 +33,6 @@ app.use('/', indexRoutes);
 
 app.listen(app.get('port'), () =>{
     console.log(`server on port ${app.get('port')}`);
-})
+}) 
 
 
